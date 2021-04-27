@@ -1,4 +1,4 @@
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 from core import *
 
 import requests
@@ -6,7 +6,7 @@ import time
 import urllib.request
 import pathlib
 import os
-import py7zr
+# import py7zr
 
 def download_data():
     print('''To download data, use:
