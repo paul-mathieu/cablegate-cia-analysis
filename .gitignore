@@ -1,2 +1,8 @@
 
 *.pyc
+data/cablegate-converted/00ANKARA8112.txt
+data/cablegate-converted/00ATHENS1501.txt
+data/cablegate-converted/00ATHENS1917.txt
+data/cablegate/00ANKARA8112.pdf
+data/cablegate/00ATHENS1501.pdf
+data/cablegate/00ATHENS1917.pdf
