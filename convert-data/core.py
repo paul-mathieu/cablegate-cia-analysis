@@ -1,3 +1,8 @@
+from pathlib import Path
+
+
+LOCAL_PATH = str(Path(__file__).parent.parent.absolute()).replace('\\', '/')
+
 # Print iterations progress
 def print_progress_bar(iteration, total,
                     prefix = '', suffix = '',

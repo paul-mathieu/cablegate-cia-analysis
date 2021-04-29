@@ -4,7 +4,7 @@ from os import listdir
 from core import *
 import time
 
-def convert_data():
+def convert_data(local_path=LOCAL_PATH):
     # variables
     path_source = str(Path(__file__).parent.parent.absolute()).replace('\\', '/')
     data_path = path_source + '/data/cablegate/'
