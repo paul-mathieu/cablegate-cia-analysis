@@ -9,7 +9,7 @@ response = client.put_item(
     TableName='cablegate_document',
     Item={
         'name':{'S': 'nom_du_document'} # -> clé
-        'content':{'S': 'contenu_du_document'} 
+        'content':{'S': 'contenu_du_document'}
     }
 )
 ```
@@ -20,7 +20,7 @@ response = client.put_item(
     TableName='cia_document',
     Item={
         'name':{'S': 'nom_du_document'}, # -> clé
-        'content':{'S': 'contenu_du_document'} 
+        'content':{'S': 'contenu_du_document'}
     }
 )
 ```
@@ -30,7 +30,7 @@ response = client.put_item(
 response = client.get_item(
     Key={
         'name': {'S': 'nom_du_document'}
-    }, 
+    },
     TableName='cablegate_document'
 )
 ```
@@ -39,7 +39,7 @@ response = client.get_item(
 response = client.get_item(
     Key={
         'name': {'S': 'nom_du_document'}
-    }, 
+    },
     TableName='cia_document'
 )
 ```
@@ -52,7 +52,7 @@ response = client.put_item(
     TableName='cablegate_document_transformed',
     Item={
         'name': {'S': 'nom_du_document'}, # -> clé
-        'subject':{'S': 'sujet_du_document'}, 
+        'subject':{'S': 'sujet_du_document'},
         'tags':{'SS' : ['tag1', 'tag2']}, # -> list
         'people_involved' : {'SS' : ['person1', 'person2']},
         'document_location' : {'S': 'sujet_du_document'},
@@ -65,6 +65,7 @@ response = client.put_item(
     }
 )
 ```
+
 ```python
 # Upload to cia_document_transformed
 response = client.put_item(
@@ -82,7 +83,7 @@ response = client.put_item(
 response = client.get_item(
     Key={
         'name': {'S': 'nom_du_document'}
-    }, 
+    },
     TableName='cablegate_document_transformed'
 )
 ```
@@ -91,7 +92,7 @@ response = client.get_item(
 response = client.get_item(
     Key={
         'name': {'S': 'nom_du_document'}
-    }, 
+    },
     TableName='cia_document_transformed'
 )
 ```
