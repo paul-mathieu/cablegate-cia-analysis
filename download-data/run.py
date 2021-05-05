@@ -3,7 +3,7 @@ import cia_archive
 
 def main():
     print('=== cablegate data ===')
-    cablegate.download_data()
+    # cablegate.download_data()
     print('=== cia data ===')
     cia_archive.download_collection()
 

@@ -16,23 +16,24 @@ def download_collection():
         length = 50)
     # for each article
     for result in search:
-        try:
-            item = get_item(result['identifier'])
-            formats = [e['format'] for e in item.files]
-            formats_available = [e for e in formats if 'TXT' in e]
-            # download if possible
-            if len(formats_available) > 0:
-                item.download(
-                    formats=formats_available, destdir=data_path,
-                    no_directory=True, silent=True)
-            # display progression
-            index_progression += 1
-            if round(index_progression/len_search, 3)%.001 == 0: # each .1%
-                print_progress_bar(
-                    index_progression, len_search,
-                    prefix = 'Progress:', suffix = 'Complete',
-                    length = 50)
-        except:
-            # if error
-            errors += 1
+        if index_progression > 39182:
+            try:
+                item = get_item(result['identifier'])
+                formats = [e['format'] for e in item.files]
+                formats_available = [e for e in formats if 'TXT' in e]
+                # download if possible
+                if len(formats_available) > 0:
+                    item.download(
+                        formats=formats_available, destdir=data_path,
+                        no_directory=True, silent=True)
+                # display progression
+            except:
+                # if error
+                errors += 1
+        index_progression += 1
+        if round(index_progression/len_search, 3)%.001 == 0: # each .1%
+            print_progress_bar(
+            index_progression, len_search,
+            prefix = 'Progress:', suffix = 'Complete',
+            length = 50)
     print(errors, ' errors')
