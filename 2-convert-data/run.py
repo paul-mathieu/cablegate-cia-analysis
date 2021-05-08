@@ -1,11 +1,11 @@
 import cablegate
-import cia_archive
+import cia
 
 def main():
     print('=== cablegate data ===')
-    cablegate.download_data()
+    # cablegate.convert_data()
     print('=== cia data ===')
-    cia_archive.download_collection()
+    cia.convert_data()
 
 if __name__ == "__main__":
     main()

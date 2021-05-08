@@ -1,5 +1,5 @@
 from pathlib import Path
-
+from time import strftime, gmtime
 
 LOCAL_PATH = str(Path(__file__).parent.parent.absolute()).replace('\\', '/')
 
@@ -27,3 +27,7 @@ def print_progress_bar(iteration, total,
     # Print New Line on Complete
     if iteration == total:
         print()
+
+
+def duration_formater(duration):
+    return strftime('%H:%M:%S', gmtime(duration))

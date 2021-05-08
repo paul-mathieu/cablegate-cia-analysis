@@ -3,3 +3,5 @@
 *.pyc
 data
 convert-data/privar.py
+data/cablegate-converted/file
+data/cablegate-converted/file
