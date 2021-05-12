@@ -2,6 +2,6 @@
 .idea
 *.pyc
 data
+!data/analysis
+!data/datasets
 convert-data/privar.py
-data/cablegate-converted/file
-data/cablegate-converted/file
