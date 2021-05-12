@@ -36,3 +36,5 @@ conda activate geo-env
 conda config --env --add channels conda-forge
 conda config --env --set channel_priority strict
 conda install python=3 geopandas`
+
+Some maps examples in html format are available in ./data/map folder.
