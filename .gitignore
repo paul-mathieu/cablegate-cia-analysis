@@ -2,6 +2,8 @@
 .idea
 *.pyc
 data
+_data
+_data-sample
 !data/analysis
 !data/datasets
 convert-data/privar.py
