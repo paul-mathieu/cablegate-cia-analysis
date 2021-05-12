@@ -100,7 +100,10 @@ def test():
     )
 
 def test2():
-    client = boto3.client('dynamodb',aws_access_key_id='AKIA4TXQL45ERJQKPIY4', aws_secret_access_key='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', region_name='us-east-2')
+    client = boto3.client('dynamodb',
+        aws_access_key_id=AWS_ACCESS_KEY_ID,
+        aws_secret_access_key=AWS_SECRET_ACCESS_KEY, 
+        region_name='us-east-2')
     client.put_item(
         TableName='cablegate_document',
         Item={
